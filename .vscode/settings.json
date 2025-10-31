@@ -1,0 +1,60 @@
+{
+  // -----------------------------------------------------------------
+  // 一般設定
+  // -----------------------------------------------------------------
+
+  // デフォルトのインデントを2スペースに設定
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+
+  // 貼り付け時に自動フォーマット
+  "editor.formatOnPaste": true,
+
+  // ファイル末尾の不要な空白を削除
+  "files.trimTrailingWhitespace": true,
+
+  // ファイル末尾に必ず改行を入れる
+  "files.insertFinalNewline": true,
+
+  // -----------------------------------------------------------------
+  // 言語別設定: Terraform
+  // -----------------------------------------------------------------
+
+  // .tf ファイルに対する設定
+  "[terraform]": {
+    // デフォルトのフォーマッターをHashiCorp製のものに指定
+    "editor.defaultFormatter": "HashiCorp.terraform",
+    // 保存時に自動で 'terraform fmt' を実行
+    "editor.formatOnSave": true
+  },
+
+  // .tfvars ファイルに対する設定
+  "[terraform-vars]": {
+    "editor.defaultFormatter": "HashiCorp.terraform",
+    "editor.formatOnSave": true
+  },
+
+  // -----------------------------------------------------------------
+  // 言語別設定: JSON (AWS IAMポリシーなど)
+  // -----------------------------------------------------------------
+
+  // .json ファイルに対する設定
+  "[json]": {
+    // VS Code標準のJSONフォーマッターを使用
+    "editor.defaultFormatter": "vscode.json-language-features",
+    // 保存時に自動フォーマット
+    "editor.formatOnSave": true,
+    // インデントを2スペースに
+    "editor.tabSize": 2
+  },
+
+  // -----------------------------------------------------------------
+  // ファイルの関連付け
+  // -----------------------------------------------------------------
+  "files.associations": {
+    "*.tfvars": "terraform-vars",
+    // IAMポリシーファイルなどを .json ではなく .tfpolicy のような
+    // 独自の拡張子にしている場合は、以下のように関連付けます
+    // "*.tfpolicy": "json"
+  }
+}

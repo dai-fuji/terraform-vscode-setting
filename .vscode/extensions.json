@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    // 必須: Terraform公式拡張機能
+    // (シンタックスハイライト、コード補完、フォーマット)
+    "HashiCorp.terraform",
+
+    // (AWSリソースの参照、Lambdaの実行・デバッグ、IAMポリシー検証など)
+    "amazonwebservices.aws-toolkit-vscode",
+
+    "oderwat.indent-rainbow",
+    // 推奨: Gitの履歴を強力にサポート
+    "eamodio.gitlens",
+
+    // 推奨: .gitignore ファイルのサポート
+    "codezombie.gitignore",
+
+    // (オプション) EKSやApp RunnerなどでYAMLを多用する場合
+    "redhat.vscode-yaml"
+  ]
+}
