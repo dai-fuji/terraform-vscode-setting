@@ -1,0 +1,24 @@
+{
+  // ( ... 既存のイメージ設定や他の設定 ... )
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  // "features" ブロックを追加または編集
+  "features": {
+    // "terraform" featureを追加します。
+    // これがTerraformのCLIをコンテナにインストールします。
+    "ghcr.io/devcontainers/features/terraform:1": {
+      "version": "latest" // "latest" または "1.8.0" のようにバージョンを指定
+    }
+    // 他にも必要なfeatureがあればここに追加します (e.g., "aws-cli", "azure-cli")
+  },
+  // "customizations" を使ってVS Code拡張機能を追加
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // HashiCorp公式のTerraform拡張機能
+        // (構文ハイライト、IntelliSense、フォーマットなど)
+        "HashiCorp.terraform"
+      ]
+    }
+  }
+  // ( ... 既存の postCreateCommand や他の設定 ... )
+}
